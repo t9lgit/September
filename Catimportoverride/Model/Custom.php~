@@ -1,0 +1,37 @@
+<?php
+namespace Mainbannerextend\Custom\Model;
+use Mainbannerextend\Custom\Api\CustomInterface;
+use Magento\Framework\App\ObjectManager;
+use Mainbannerextend\Apiextend\Model\MainbannerFactory;
+ 
+class Custom implements CustomInterface
+{
+    /**
+     * Returns greeting message to user
+     *
+     * @api
+     * @param string $name Users name.
+     * @return string Greeting message with users name.
+     */
+
+   protected $_mainbannerFactory;
+
+  public function __construct(\Magento\Backend\Block\Template\Context $context,
+        \Mainbannerextend\Apiextend\Model\MainbannerFactory $MainbannerFactory,
+       ) {
+         parent::__construct($context);
+        $this->_mainbannerFactory = $MainbannerFactory;
+        
+    }
+
+    public function name($name) {
+		
+        $resultPage = $this->_mainbannerFactory->create();
+        $collection = $resultPage->getCollection(); //Get Collection of module data
+        var_dump($collection->getData());
+        exit;
+      
+		//echo "hans";
+                //die;
+    }
+}
