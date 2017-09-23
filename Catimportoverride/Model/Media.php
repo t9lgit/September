@@ -35,7 +35,7 @@ class Media extends AbstractImportValidator implements RowValidatorInterface
      * @param string $string
      * @return bool
      */
-    protected function checkValidUrl($string)
+    protected function checkValidUrl($string) 
     {
         return preg_match(self::URL_REGEXP, $string);
     }
