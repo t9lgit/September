@@ -1,0 +1,28 @@
+/*************** css for Qty Switcher *******************/
+
+
+input#updates { 
+	width: 25%;
+    text-align: center;
+    border: 1px solid #CCC;
+    transform: translateY(-16px);
+	padding: 0px;
+	color: #9f925d;
+	margin-left: -5px;
+    margin-right: -5px;
+	}
+.reduce-quantity, .add-quantity {
+    height: 40px;
+    width: 40px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    top: 0;
+    display: inline-block;
+}
+.control {	
+	position: relative;
+    float: right;
+    width: 52%;
+    transform: translateY(26px);
+	}
